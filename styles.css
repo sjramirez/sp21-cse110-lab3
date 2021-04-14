@@ -1,0 +1,14 @@
+/*This is where I will comment my css*/
+
+body {
+    background-color: #e4e3e3;
+}
+
+hr{
+    background-color: rgb(132,169,172);
+    height: 10px;
+}
+
+h1{
+    color: hsl(201, 43%, 22%)
+}
