@@ -1,14 +1,43 @@
 /*This is where I will comment my css*/
 
 body {
+    border-top:0px;
+    margin-top: 0cm;
+    margin-bottom: 0vh;
+    margin-left: 0vw;
+    margin-right: 0px;
+    padding-top: 0mm;
     background-color: #e4e3e3;
 }
 
 hr{
-    background-color: rgb(132,169,172);
-    height: 10px;
+   
+    height: 0px;
+    margin: 0em 0em 0em 0em;
+    border-color: black;
+    border-width:5px;
+    border-style: dashed;
+    
+
 }
 
 h1{
-    color: hsl(201, 43%, 22%)
+    color: hsl(198, 42%, 6%)
+}
+
+header{
+    margin-top:0px; 
+    padding-top: 2em;
+    margin-bottom: 0em;
+    padding-bottom: 5px;
+    background-color: #84a9ac;
+    text-align: center;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+footer{
+    background-color:rgb(132,169,172);
+    padding: 2em 0em 0em 2em;
+    margin :auto;
 }
