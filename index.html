@@ -5,10 +5,19 @@
         <link rel="icon" href="media/wave.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="styles.css"/>
         <title>Steven Ramirez's Journal</title>
+        <style>
+            #tostone{
+                display:block;
+                margin-right:auto;
+                margin-left:auto;
+                width:25%;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <div>
                 <h1><i>Steven Ramirez's Journal Entries</i></h1>
                 <p>Welcome to my personal journal website! Here, I will be using this site as an outlet
                     for my everyday life and what is happening in it. <br>I hope you enjoy. 
@@ -16,28 +25,28 @@
                 <p>
                     I will be organizing my entries into a few different parts, 
                 </p>
-                <ol>
+                <ol class="flex-container1">
                     <li>Activities that I did for school</li>
                     <li>Activities I did for fun</li>
                     <li>Anything else that may have happened to me that's worth mentioning</li>
                 </ol>
+                    
                 <h2><span>Links to log entries</span></h2>
                 <p><strong>Note:</strong> As of now, only works if the details are all open</p>
                 <nav>
                     <ol>
                         <li><a href="#April4th"><em>Sunday, April 4th 2021</em></a></li>
                         <li><a href="#April5th"><em>Monday, April 5th 2021</em></a></li>
-                        <li><a href="#April6th"><em>Tuesday, April 6th 2021</em></a></li>
+                        <li><a href="#April6th" ><em>Tuesday, April 6th 2021</em></a></li>
                     </ol>
-                </nav>
-            </div>    
+                </nav>   
         </header>
         <hr>
         <main>
         <details>
             <summary>Journal Entries</summary>
-                    
-                        <h2 id="April4th"><em>Sunday, April 4th 2021</em></h2>
+
+                        <h2 class="journal-header" id="April4th"><em>Sunday, April 4th 2021</em></h2>
                         <p>So today was Easter Sunday, that means that I was in for a busy day with going to church, hanging out 
                             with family, and on top of my normal school work that needed to be done for the day. 
                         </p>
@@ -84,7 +93,7 @@
                                 just make them the old fashioned way in the pan. <br> For those who are unfarmiliar with what 
                                 tostones look like here is an image.
                                 </p>
-                                <img src="media/tostone.jpg" alt="Picture of Tostones">
+                                <img src="media/tostone.jpg" alt="Picture of Tostones" id="tostone">
                             </li>
                             </ul>
                         </li>
@@ -94,7 +103,7 @@
                 
                 
                     
-                        <h2 id="April5th"><em>Monday, April 5th 2021</em></h2>
+                        <h2 id="April5th" class="journal-header"><em>Monday, April 5th 2021</em></h2>
                         <p>There was not much going on today, but I did make the drive back from Riverside to La Jolla as well as drop off
                             my girlfriend's sister at Point Loma.
                         </p>
@@ -158,7 +167,7 @@
            
                
                     
-                        <h2 id="April6th"><em>Tuesday, April 6th 2021</em></h2>
+                        <h2 id="April6th" class="journal-header"><em>Tuesday, April 6th 2021</em></h2>
                         <p>Today was a day where I was able to be pretty productive in school on top of the fact that I got 
                             some pretty good news.
                         </p>
@@ -209,40 +218,53 @@
         </details>
         </main>
         <hr>
-        <h2>Make your own Journal Entry</h2>
-        <form>
+        <h2 title="form-header">Make your own Journal Entry</h2>
+        <form >
             <fieldset>
-                <label>Your Name:</label>
-                <input type="text"><br>
-                <label>Today's Date:</label>
-                <input type="date"><br>
-                <label>Extra Files:</label>
-                <input type="checkbox"><br>     
-                <div>
-                    <label>Email me when updates occur</label>
-                    <input type="radio" id="1" name="Contact" value="Yes">
-                    <label for="1">Yes</label>
-                    <input type="radio" id="2" name="Contact" value="No">
-                    <label for="2">No</label><br>
+                <div class = "grid-container">
+                    <div id="item-a" class="grid-item">
+                        <label>Your Name:</label>
+                        <input type="text"><br>
+                    </div>
+                    <div class="grid-item">
+                        <label>Today's Date:</label>
+                        <input type="date"><br>
+                    </div>
+                    <div class="grid-item">
+                        <label>Extra Files:</label>
+                        <input type="checkbox"><br>   
+                    </div>  
+                    <div class="grid-item">
+                        <label>Email me when updates occur</label>
+                        <input type="radio" id="1" name="Contact" value="Yes">
+                        <label for="1">Yes</label>
+                        <input type="radio" id="2" name="Contact" value="No">
+                        <label for="2">No</label><br>
+                    </div>
+                </div>  
+                <label  id="text-label">Write your entry here:</label>
+                <textarea  rows="5" cols="100">Enter Text Here</textarea><br>
+                    
+                    
+                    <label >How many entries will you be writing?</label>
+                    <input list="list">
+                    <datalist id="list">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3+">
+                    </datalist><br>
+                    <label >What sections will you be writing:</label>
+                    <select>
+                        <option>All of them</option>
+                        <option>Only School</option>
+                        <option>Only Fun</option>
+                        <option>Only Misc</option>
+                        <option>Something inbetween</option>
+                    </select><br>
+                    <button style="align-self:center;">Submit</button>
+                    <button title="clear" style="display:inline" style="width: 10vh">clear</button>
                 </div>
-                <label>Write your entry here:</label>
-                <textarea rows="5" cols="100">Enter Text Here</textarea><br>
-                <label>How many entries will you be writing?</label>
-                <input list="list">
-                <datalist id="list">
-                    <option value="1">
-                    <option value="2">
-                    <option value="3+">
-                </datalist><br>
-                <label>What sections will you be writing:</label>
-                <select>
-                    <option>All of them</option>
-                    <option>Only School</option>
-                    <option>Only Fun</option>
-                    <option>Only Misc</option>
-                    <option>Something inbetween</option>
-                </select><br>
-                <button>Submit</button>
+                
             </fieldset>
         </form>
         <footer>
